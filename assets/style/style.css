@@ -1,0 +1,22 @@
+
+/* PARALLAX A VOIR */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .parallax1 {
+    background-image: url("/assets/img/bgOne.jpg");
+  }
+  
+  .parallax2 {
+    background-image: url("/assets/img/bgTwo.jpg");
+  }
+  
+  h1{
+    color: white;
+    font-size: 75px;
+  }
