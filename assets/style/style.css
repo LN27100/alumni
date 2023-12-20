@@ -1,22 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+/* font-family: 'Rubik Doodle Shadow', cursive; */
 
 /* PARALLAX*/
 .parallax {
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .parallax1 {
-    background-image: url("/assets/img/bgOne.jpg");
-  }
-  
-  .parallax2 {
-    background-image: url("/assets/img/bgTwo.jpg");
-  }
-  
-  h1{
-    color: white;
-    font-size: 75px;
-  }
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax1 {
+  background-image: url("/assets/img/bgOne.jpg");
+}
+
+.parallax2 {
+  background-image: url("/assets/img/bgTwo.jpg");
+}
+
+h1 {
+  color: #44A33D;
+  font-size: 75px;
+  font-family: 'Rubik Doodle Shadow', cursive;
+  background-color: white;
+  text-align: center;
+}
+
+body {
+  color: white;
+}
+
+.navbar {
+  background-color: #44A33D;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: white;
+  font-weight: bold;
+}
+
+
+.navbar-brand {
+  font-family: 'Rubik Doodle Shadow', cursive;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+  font-weight: bold ;
+}
+
+.transit {
+  background-color: #44A33D;
+}
+
+.foot {
+  background-color: #44A33D;
+}
+
+.footLink {
+  color: white;
+}
+
+.footLink:hover {
+  color: white;
+  font-weight: bold;
+}

@@ -1,10 +1,3 @@
-<?php
-
-include './assets/data/data.php';
-// var_dump($data);
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,10 +17,23 @@ include './assets/data/data.php';
 <div>Bienvenue sur le site des anciens élèves de l'Afpa. Inscrivez-vous et retrouvez vos anciens camarades de sessions pour savoir ce qu'ils sont devenus, partager votre parcours, vos expériences.</div>
 <div class="parallax parallax1">
   <h1>ALUMNI AFPA</h1>
+
+
+  <?php
+
+include './assets/data/data.php';
+var_dump($data);
+
+?>
+
+
 </div>
-<div>Contactez vos anciens camarades et organisez des retrouvailles ! Les réunions d'anciens élèves sont affichées dans l'agenda de la communauté alors n'hésitez pas à vous inscrire à l'une d'entre elles pour y revoir vos collègues de formations mais aussi vos formateurs !  </div>
+<div class="transit">Contactez vos anciens camarades et organisez des retrouvailles ! Les réunions d'anciens élèves sont affichées dans l'agenda de la communauté alors n'hésitez pas à vous inscrire à l'une d'entre elles pour y revoir vos collègues de formations mais aussi vos formateurs !  </div>
 <div class="parallax parallax2">
   <h1>ALUMNI AFPA</h1>
+  
+
+
 </div>
 
 <footer>
