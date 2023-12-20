@@ -214,7 +214,7 @@ th {
   background-color: rgba(147, 147, 147, 0.9);
 }
 
-body > div.parallax.parallax2 > a {
+body > div.parallax.parallax2 > div:nth-child(3) > a {
   text-decoration-line: none;
   color: white;
   font-weight: bold;

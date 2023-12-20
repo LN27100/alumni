@@ -75,9 +75,11 @@
             echo "<h2>" . date('F Y', $firstDayOfMonth) . "</h2>";
             
             echo "</div>";
+            echo "<div>";
             echo "<a href=\"?year=" . date('Y', strtotime('-1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('-1 month', $firstDayOfMonth)) . "\">Mois précédent</a>";
             echo " | ";
             echo "<a href=\"?year=" . date('Y', strtotime('+1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('+1 month', $firstDayOfMonth)) . "\">Mois suivant</a>";
+            echo "</div>";
             echo "<table>";
             echo "<tr>";
             foreach ($daysOfWeek as $day) {
