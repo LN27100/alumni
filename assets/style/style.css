@@ -88,8 +88,6 @@ body {
 
 /* cards profil stagiaires */
 
-/* cards profil stagiaires */
-
 body>div.parallax.parallax1>div>div {
   justify-content: center;
   margin-top: 2rem;
@@ -114,7 +112,7 @@ body>div.parallax.parallax1>div>div>div>div:hover {
 
 .card-title {
   font-family: 'Diphylleia', serif;
-  background-color: rgba(68, 163, 61, 0.8);
+  background-color: rgba(227, 0, 126, 0.5);
   font-weight: bolder;
   color: black;
   text-align: center;
@@ -185,8 +183,8 @@ body > div.parallax.parallax2 > div {
 }
 
 body > div.parallax.parallax2 > div > h2 {
-  color: grey;
-  background-color: white;
+  color: white;
+  background-color: rgba(227, 0, 126, 0.7);
   border-radius: 20px;
   width: 40rem;
   height: 3rem;
@@ -218,4 +216,9 @@ body > div.parallax.parallax2 > div:nth-child(3) > a {
   text-decoration-line: none;
   color: white;
   font-weight: bold;
+}
+
+
+body > div.parallax.parallax2 > table > tbody > tr:nth-child(4) > td:nth-child(3) {
+  background-color:#44A33D ;
 }
