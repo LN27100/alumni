@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+
     <header>
         <?php include '../alumni/components/navbar.php'; ?>
     </header>
