@@ -19,12 +19,27 @@
   <h1>ALUMNI AFPA</h1>
 
 
-  <?php
+  <div class="container">
+            <div class="row">
+                <?php
+                include './assets/data/data.php';
+                foreach ($data as $item) {
+                    echo '<div class="col-md-3">';
+                    echo '<div class="card">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">'. $item['name'] . '</h5>';
+                    echo '<p class="card-text">' . $item['region'] . '</p>';
+                    echo '<p class="card-text">' . $item['phone'] . '</p>';
+                    echo '<p class="card-text">' . $item['email'] . '</p>';
+                    echo '</div></div></div>';
+                }
+                ?>
 
-include './assets/data/data.php';
-var_dump($data);
+            </div>
+        </div>
+ 
 
-?>
+
 
 
 </div>

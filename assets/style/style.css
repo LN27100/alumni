@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 /* font-family: 'Rubik Doodle Shadow', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+/* font-family: 'Diphylleia', serif;
+ */
+
 
 /* PARALLAX*/
 .parallax {
@@ -51,7 +55,7 @@ body {
 
 .navbar-brand:hover {
   color: white;
-  font-weight: bold ;
+  font-weight: bold;
 }
 
 .transit {
@@ -69,4 +73,26 @@ body {
 .footLink:hover {
   color: white;
   font-weight: bold;
+}
+
+
+/* cards profil stagiaires */
+
+.card {
+  margin-bottom: 20px;
+}
+
+body>div.parallax.parallax1>div>div>div>div {
+  background-color: rgba(68, 163, 61, 0.2);
+  color: white;
+}
+
+.card-title {
+  font-family: 'Diphylleia', serif;
+  background-color: rgba(68, 163, 61, 0.5);
+  font-weight: lighter;
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 10px;
 }
