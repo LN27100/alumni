@@ -10,7 +10,7 @@
           <a class="nav-link" aria-current="page" href="#">Adhérents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Communauté</a>
+          <a class="nav-link" href="#">Calendrier évènements</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Connexion</a>

@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 /* font-family: 'Rubik Doodle Shadow', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
-/* font-family: 'Diphylleia', serif;
- */
+/* font-family: 'Diphylleia', serif; */
 
 
 /* PARALLAX*/
@@ -64,6 +63,11 @@ body {
   font-weight: bold;
 }
 
+.navbar-nav .nav-link {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
 .transit {
   background-color: #44A33D;
 }
@@ -84,21 +88,28 @@ body {
 
 /* cards profil stagiaires */
 
+/* cards profil stagiaires */
+
 body>div.parallax.parallax1>div>div {
   justify-content: center;
   margin-top: 2rem;
 }
 
-
 body>div.parallax.parallax1>div>div>div>div {
   background-color: rgba(68, 163, 61, 0.5);
   color: white;
-  width: 10rem;
+  width: 15rem;
   height: 11.5rem;
   text-align: center;
   border: 2px solid white;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  /* Ajouter une transition pour un effet fluide */
+}
 
+/* Appliquer l'effet de zoom au survol */
+body>div.parallax.parallax1>div>div>div>div:hover {
+  transform: scale(1.2);
 }
 
 .card-title {
@@ -109,15 +120,30 @@ body>div.parallax.parallax1>div>div>div>div {
   text-align: center;
   font-size: 1rem;
   border-radius: 10px;
+  line-height: 1;
 }
 
 .child {
-  flex-basis: 15%
+  flex-basis: 15%;
 }
 
 .img {
   height: 5rem;
   width: auto;
+}
+
+.region {
+  line-height: 1;
+}
+
+.phone {
+  font-size: 0.7rem;
+  line-height: 0.4;
+}
+
+.mail {
+  line-height: 0.4;
+  font-size: 0.7rem;
 }
 
 /* SCROLLBAR */
@@ -150,3 +176,46 @@ body>div.parallax.parallax1>div>div>div>div {
       transparent)
 }
 
+
+/* CALENDRIER */
+
+body > div.parallax.parallax2 > div {
+  display: flex;
+  justify-content: center;
+}
+
+body > div.parallax.parallax2 > div > h2 {
+  color: grey;
+  background-color: white;
+  border-radius: 20px;
+  width: 40rem;
+  height: 3rem;
+  text-align: center;
+  font-family: 'Diphylleia', serif;
+  margin: 3rem;
+}
+
+table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+th,
+td {
+  background-color: rgba(147, 147, 147, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  padding: 2rem;
+}
+
+th {
+  font-family: 'Diphylleia', serif;
+  background-color: rgba(147, 147, 147, 0.9);
+}
+
+body > div.parallax.parallax2 > a {
+  text-decoration-line: none;
+  color: white;
+  font-weight: bold;
+}
