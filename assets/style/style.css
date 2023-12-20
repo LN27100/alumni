@@ -7,7 +7,7 @@
 
 /* PARALLAX*/
 .parallax {
-  height: 100vh;
+  height: 950px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,21 +83,28 @@ body {
 
 
 /* cards profil stagiaires */
-.card {
-  margin-bottom: 20px;
+
+body > div.parallax.parallax1 > div > div {
+  justify-content: center;
+  margin-top: 2rem;
 }
 
+
 body>div.parallax.parallax1>div>div>div>div {
-  background-color: rgba(68, 163, 61, 0.2);
+  background-color: rgba(68, 163, 61, 0.5);
   color: white;
   width: 10rem;
+  height: 11.5rem;
+  text-align: center;
+  border: 2px solid white;
+  margin-bottom: 20px;
 
 }
 
 .card-title {
   font-family: 'Diphylleia', serif;
-  background-color: rgba(68, 163, 61, 0.5);
-  font-weight: lighter;
+  background-color: rgba(68, 163, 61, 0.8);
+  font-weight: bolder;
   color: black;
   text-align: center;
   font-size: 1rem;
@@ -105,7 +112,7 @@ body>div.parallax.parallax1>div>div>div>div {
 }
 
 .child {
-  flex-basis : 15%
+  flex-basis: 15%
 }
 
 .img {

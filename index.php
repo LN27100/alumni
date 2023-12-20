@@ -26,12 +26,12 @@
                 include './assets/data/data.php';
                 $nb = 1;
                 foreach ($data as $item) {
-                   
+
                     echo '<div class="child">';
                     echo '<div class="card">';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title">' . $item['name'] . '</h5>';
-                    echo '<img class= "img" src="./assets/img/portrait-'. $nb . '.jpg" /> ';
+                    echo '<img class= "img" src="./assets/img/portrait-' . $nb . '.jpg" /> ';
                     echo '<p class="card-text">' . $item['region'] . '</p>';
                     echo '</div></div></div>';
                     $nb++;
