@@ -30,6 +30,12 @@ h1 {
   text-align: center;
 }
 
+.symbole {
+  height: 2rem;
+  width: auto;
+  margin-bottom: 4rem;
+}
+
 body {
   color: white;
 }
@@ -95,4 +101,13 @@ body>div.parallax.parallax1>div>div>div>div {
   text-align: center;
   font-size: 1rem;
   border-radius: 10px;
+}
+
+.child {
+  flex-basis : 25%
+}
+
+.img {
+  height: 10rem;
+  width: auto;
 }
