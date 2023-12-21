@@ -13,7 +13,7 @@
           <a class="nav-link" href="#calendrier">Calendrier évènements</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Connexion</a>
+          <a class="nav-link">Connexion</a>
         </li>
     
       </ul>

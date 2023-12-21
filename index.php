@@ -61,22 +61,25 @@
 
 function createCalendar($year, $month)
 {
+    // Tableau des jours de la semaine avec Lundi en première position
+    $daysOfWeek = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
+
     // Calculer le premier jour du mois
     $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
+
+    // Jour de la semaine du premier jour du mois (1 = lundi, ..., 7 = dimanche)
+    $firstDayOfWeek = date('N', $firstDayOfMonth);
+
+    // Trouver le décalage par rapport à la première colonne
+    $offset = $firstDayOfWeek - 1;
 
     // Nombre de jours dans le mois
     $daysInMonth = date('t', $firstDayOfMonth);
 
-    // Jour de la semaine du premier jour du mois (0 = dimanche, 1 = lundi, ..., 6 = samedi)
-    $firstDayOfWeek = date('w', $firstDayOfMonth);
-
-    // Tableau des jours de la semaine
-    $daysOfWeek = array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
-
     // Affichage du calendrier
     echo "<div>";
-    echo "<h2>" . date('F Y', $firstDayOfMonth) . "</h2>";
-    echo '<a href="#top" class="btnReturn">Haut de page</a>';
+    $dateTime = new DateTime("@$firstDayOfMonth");
+    echo "<h2>" . $dateTime->format('F Y') . "</h2>";    echo '<a href="#top" class="btnReturn">Haut de page</a>';
     echo "</div>";
     echo "<div>";
     echo "<a href=\"?year=" . date('Y', strtotime('-1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('-1 month', $firstDayOfMonth)) . "\">Mois précédent</a>";
@@ -85,32 +88,34 @@ function createCalendar($year, $month)
     echo "</div>";
     echo "<table>";
     echo "<tr>";
+
+    // Affichage des jours de la semaine
     foreach ($daysOfWeek as $day) {
         echo "<th>$day</th>";
     }
     echo "</tr><tr>";
 
     // Ajouter des cellules vides pour les jours précédents du mois
-    for ($i = 0; $i < $firstDayOfWeek; $i++) {
+    for ($i = 0; $i < $offset; $i++) {
         echo "<td></td>";
     }
 
-   // Remplir le calendrier avec les jours du mois
-for ($day = 1; $day <= $daysInMonth; $day++) {
-    if (($month == 2 && $day == 14) || ($month == 12 && $day == 24)|| ($month == 7 && $day == 7)) {
-        echo "<td style='background-color: #44A33D;'>$day</td>";
-    } else {
-        echo "<td>$day</td>";
-    }
+    // Remplir le calendrier avec les jours du mois
+    for ($day = 1; $day <= $daysInMonth; $day++) {
+        if (($month == 2 && $day == 14) || ($month == 12 && $day == 24) || ($month == 7 && $day == 7)) {
+            echo "<td style='background-color: #44A33D;'>$day</td>";
+        } else {
+            echo "<td>$day</td>";
+        }
 
-    // Passer à une nouvelle ligne chaque semaine
-    if (($firstDayOfWeek + $day) % 7 == 0) {
-        echo "</tr><tr>";
+        // Passer à une nouvelle ligne chaque semaine
+        if (($offset + $day) % 7 == 0) {
+            echo "</tr><tr>";
+        }
     }
-}
 
     // Ajouter des cellules vides pour les jours suivants du mois
-    $lastDayOfWeek = ($firstDayOfWeek + $daysInMonth) % 7;
+    $lastDayOfWeek = ($offset + $daysInMonth) % 7;
     if ($lastDayOfWeek != 0) {
         for ($i = $lastDayOfWeek; $i < 7; $i++) {
             echo "<td></td>";
