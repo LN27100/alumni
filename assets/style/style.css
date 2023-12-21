@@ -5,6 +5,8 @@
 
 
 /* PARALLAX*/
+
+
 .parallax {
   height: 950px;
   background-attachment: fixed;
@@ -177,16 +179,16 @@ body>div.parallax.parallax1>div>div>div>div:hover {
 
 /* CALENDRIER */
 
-body > div.parallax.parallax2 > div {
+body>div.parallax.parallax2>div {
   display: flex;
   justify-content: center;
 }
 
-body > div.parallax.parallax2 > div > h2 {
+body>div.parallax.parallax2>div>h2 {
   color: white;
   background-color: rgba(227, 0, 126, 0.7);
   border-radius: 20px;
-  width: 40rem;
+  width: 30rem;
   height: 3rem;
   text-align: center;
   font-family: 'Diphylleia', serif;
@@ -212,17 +214,30 @@ th {
   background-color: rgba(147, 147, 147, 0.9);
 }
 
-body > div.parallax.parallax2 > div:nth-child(3) > a {
+body>div.parallax.parallax2>div:nth-child(3)>a {
   text-decoration-line: none;
   color: white;
   font-weight: bold;
 }
 
 
-.btnReturn {
+#calendrier>div:nth-child(2)>a {
   background-color: #44A33D;
   text-decoration-line: none;
   color: white;
   border-radius: 5px;
   height: 2rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+#new {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #00A0E0;
+  margin-top: 1rem;
+}
+
+.newParagraphe p {
+  margin-bottom: 0.3rem; 
 }
