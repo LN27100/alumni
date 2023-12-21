@@ -88,7 +88,7 @@ body {
 }
 
 
-/* cards profil stagiaires */
+/* CARDS profil stagiaires */
 
 body>div.parallax.parallax1>div>div {
   justify-content: center;
@@ -98,8 +98,8 @@ body>div.parallax.parallax1>div>div {
 body>div.parallax.parallax1>div>div>div>div {
   background-color: rgba(68, 163, 61, 0.5);
   color: white;
-  width: 15rem;
-  height: 11.5rem;
+  width: 18rem;
+  height: 18rem;
   text-align: center;
   border: 2px solid white;
   margin-bottom: 20px;
@@ -118,17 +118,17 @@ body>div.parallax.parallax1>div>div>div>div:hover {
   font-weight: bolder;
   color: black;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 10px;
-  line-height: 1;
+  padding: 0.5rem;
 }
 
 .child {
-  flex-basis: 15%;
+  flex-basis: 25%;
 }
 
 .img {
-  height: 5rem;
+  height: 8rem;
   width: auto;
 }
 
@@ -137,14 +137,16 @@ body>div.parallax.parallax1>div>div>div>div:hover {
 }
 
 .phone {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 0.4;
 }
 
 .mail {
   line-height: 0.4;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
+
+
 
 /* SCROLLBAR */
 
@@ -184,7 +186,11 @@ body>div.parallax.parallax2>div {
   justify-content: center;
 }
 
-body>div.parallax.parallax2>div>h2 {
+#calendrier>div {
+  display: flex;
+}
+
+#calendrier>div:nth-child(2)>h2 {
   color: white;
   background-color: rgba(227, 0, 126, 0.7);
   border-radius: 20px;
@@ -192,7 +198,7 @@ body>div.parallax.parallax2>div>h2 {
   height: 3rem;
   text-align: center;
   font-family: 'Diphylleia', serif;
-  margin: 3rem;
+  margin-left: 13rem;
 }
 
 table {
@@ -214,7 +220,7 @@ th {
   background-color: rgba(147, 147, 147, 0.9);
 }
 
-body>div.parallax.parallax2>div:nth-child(3)>a {
+#calendrier>div:nth-child(3)>a {
   text-decoration-line: none;
   color: white;
   font-weight: bold;
@@ -228,6 +234,7 @@ body>div.parallax.parallax2>div:nth-child(3)>a {
   border-radius: 5px;
   height: 2rem;
   padding: 0 0.5rem 0 0.5rem;
+  margin: 1.5rem 0 0 3rem;
 }
 
 #new {
@@ -235,9 +242,23 @@ body>div.parallax.parallax2>div:nth-child(3)>a {
   display: flex;
   flex-direction: column;
   background-color: #00A0E0;
-  margin-top: 1rem;
+  margin: 1rem 0 0 1rem;
 }
 
 .newParagraphe p {
-  margin-bottom: 0.3rem; 
+  margin-bottom: 0.3rem;
+  padding-left: 1rem;
+}
+
+/* PAGINATION */
+
+#adhérents>div.container>div>div.pagination {}
+
+#adhérents>div.container>div>div.pagination>a {
+  text-decoration: none;
+  color: #E3007E;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: white;
 }
