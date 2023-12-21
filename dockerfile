@@ -1,14 +1,14 @@
-# Utilisez une image PHP de base
+# Utiliser une image PHP de base
 FROM php:latest
 
-# Définissez le répertoire de travail dans le conteneur
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /var/www/html
 
-# Copiez les fichiers PHP de votre projet dans le conteneur
+# Copier les fichiers PHP de votre projet dans le conteneur
 COPY ./src/ /var/www/html/
 
-# Exposez le port si nécessaire (par exemple, le port 80 pour un serveur web)
+# Exposer le port 80 pour le serveur web PHP
 EXPOSE 80
 
-# Commande pour démarrer votre application (peut varier selon le serveur web utilisé)
+# Démarrer le serveur web PHP (dans ce cas, avec le serveur web intégré de PHP)
 CMD ["php", "-S", "0.0.0.0:80"]
