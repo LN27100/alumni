@@ -14,7 +14,7 @@
 
 
     <header id="top">
-        <?php include '../alumni/components/navbar.php'; ?>
+        <?php include '../alumni/src/components/navbar.php'; ?>
     </header>
 
 
@@ -168,7 +168,7 @@
     </div>
 
     <footer>
-        <?php include '../alumni/components/footer.php'; ?>
+        <?php include '../alumni/src/components/footer.php'; ?>
     </footer>
 
 </body>
