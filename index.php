@@ -12,13 +12,13 @@
 <body>
 
 
-    <header>
+    <header id="top">
         <?php include '../alumni/components/navbar.php'; ?>
     </header>
 
 
     <div>Bienvenue sur le site des anciens élèves de l'Afpa. Inscrivez-vous et retrouvez vos anciens camarades de sessions pour savoir ce qu'ils sont devenus, partager votre parcours, vos expériences.</div>
-    <div class="parallax parallax1">
+    <div class="parallax parallax1" id="adhérents">
         <h1>ALUMNI AFPA<img src="/assets/img/AFPA-symbole.jpg" class="symbole" alt="symbole afpa"></h1>
 
 
@@ -40,6 +40,7 @@
                     echo '</div></div></div>';
                     $nb++;
                 }
+                
                 ?>
 
             </div>
@@ -51,75 +52,80 @@
 
     </div>
     <div class="transit">Contactez vos anciens camarades et organisez des retrouvailles ! Les réunions d'anciens élèves sont affichées dans l'agenda de la communauté alors n'hésitez pas à vous inscrire à l'une d'entre elles pour y revoir vos collègues de formations mais aussi vos formateurs ! </div>
-    <div class="parallax parallax2">
+    <div class="parallax parallax2" id="calendrier" >
         <h1>ALUMNI AFPA</h1>
 
         <!-- CALENDRIER -->
+
         <?php
-        function createCalendar($year, $month)
-        {
-            // Calculer le premier jour du mois
-            $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
 
-            // Nombre de jours dans le mois
-            $daysInMonth = date('t', $firstDayOfMonth);
+function createCalendar($year, $month)
+{
+    // Calculer le premier jour du mois
+    $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
 
-            // Jour de la semaine du premier jour du mois (0 = dimanche, 1 = lundi, ..., 6 = samedi)
-            $firstDayOfWeek = date('w', $firstDayOfMonth);
+    // Nombre de jours dans le mois
+    $daysInMonth = date('t', $firstDayOfMonth);
 
-            // Tableau des jours de la semaine
-            $daysOfWeek = array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+    // Jour de la semaine du premier jour du mois (0 = dimanche, 1 = lundi, ..., 6 = samedi)
+    $firstDayOfWeek = date('w', $firstDayOfMonth);
 
-            // Affichage du calendrier
-            echo "<div>";
-            echo "<h2>" . date('F Y', $firstDayOfMonth) . "</h2>";
-            
-            echo "</div>";
-            echo "<div>";
-            echo "<a href=\"?year=" . date('Y', strtotime('-1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('-1 month', $firstDayOfMonth)) . "\">Mois précédent</a>";
-            echo " | ";
-            echo "<a href=\"?year=" . date('Y', strtotime('+1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('+1 month', $firstDayOfMonth)) . "\">Mois suivant</a>";
-            echo "</div>";
-            echo "<table>";
-            echo "<tr>";
-            foreach ($daysOfWeek as $day) {
-                echo "<th>$day</th>";
-            }
-            echo "</tr><tr>";
+    // Tableau des jours de la semaine
+    $daysOfWeek = array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
 
-            // Ajouter des cellules vides pour les jours précédents du mois
-            for ($i = 0; $i < $firstDayOfWeek; $i++) {
-                echo "<td></td>";
-            }
+    // Affichage du calendrier
+    echo "<div>";
+    echo "<h2>" . date('F Y', $firstDayOfMonth) . "</h2>";
+    echo '<a href="#top" class="btnReturn">Haut de page</a>';
+    echo "</div>";
+    echo "<div>";
+    echo "<a href=\"?year=" . date('Y', strtotime('-1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('-1 month', $firstDayOfMonth)) . "\">Mois précédent</a>";
+    echo " | ";
+    echo "<a href=\"?year=" . date('Y', strtotime('+1 month', $firstDayOfMonth)) . "&month=" . date('n', strtotime('+1 month', $firstDayOfMonth)) . "\">Mois suivant</a>";
+    echo "</div>";
+    echo "<table>";
+    echo "<tr>";
+    foreach ($daysOfWeek as $day) {
+        echo "<th>$day</th>";
+    }
+    echo "</tr><tr>";
 
-            // Remplir le calendrier avec les jours du mois
-            for ($day = 1; $day <= $daysInMonth; $day++) {
-                echo "<td>$day</td>";
+    // Ajouter des cellules vides pour les jours précédents du mois
+    for ($i = 0; $i < $firstDayOfWeek; $i++) {
+        echo "<td></td>";
+    }
 
-                // Passer à une nouvelle ligne chaque semaine
-                if (($firstDayOfWeek + $day) % 7 == 0) {
-                    echo "</tr><tr>";
-                }
-            }
+   // Remplir le calendrier avec les jours du mois
+for ($day = 1; $day <= $daysInMonth; $day++) {
+    if (($month == 2 && $day == 14) || ($month == 12 && $day == 24)|| ($month == 7 && $day == 7)) {
+        echo "<td style='background-color: #44A33D;'>$day</td>";
+    } else {
+        echo "<td>$day</td>";
+    }
 
-            // Ajouter des cellules vides pour les jours suivants du mois
-            $lastDayOfWeek = ($firstDayOfWeek + $daysInMonth) % 7;
-            if ($lastDayOfWeek != 0) {
-                for ($i = $lastDayOfWeek; $i < 7; $i++) {
-                    echo "<td></td>";
-                }
-            }
+    // Passer à une nouvelle ligne chaque semaine
+    if (($firstDayOfWeek + $day) % 7 == 0) {
+        echo "</tr><tr>";
+    }
+}
 
-            echo "</tr>";
-            echo "</table>";
+    // Ajouter des cellules vides pour les jours suivants du mois
+    $lastDayOfWeek = ($firstDayOfWeek + $daysInMonth) % 7;
+    if ($lastDayOfWeek != 0) {
+        for ($i = $lastDayOfWeek; $i < 7; $i++) {
+            echo "<td></td>";
         }
+    }
 
-        // Utilisation de la fonction pour afficher le calendrier du mois actuel
-        $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
-        $month = isset($_GET['month']) ? $_GET['month'] : date('n');
-        createCalendar($year, $month);
-        ?>
+    echo "</tr>";
+    echo "</table>";
+}
 
+// Utilisation de la fonction pour afficher le calendrier du mois actuel
+$year = isset($_GET['year']) ? $_GET['year'] : date('Y');
+$month = isset($_GET['month']) ? $_GET['month'] : date('n');
+createCalendar($year, $month);
+?>
 
     </div>
 
@@ -127,7 +133,5 @@
         <?php include '../alumni/components/footer.php'; ?>
     </footer>
 
-
-</body>
 
 </html>

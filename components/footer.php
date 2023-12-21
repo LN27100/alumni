@@ -1,9 +1,9 @@
 <div class="container">
   <footer class="foot py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="footLink nav-link px-2">Accueil</a></li>
-      <li class="nav-item"><a href="#" class="footLink nav-link px-2">Adhérents</a></li>
-      <li class="nav-item"><a href="#" class="footLink nav-link px-2">Communauté</a></li>
+      <li class="nav-item"><a href="#top" class="footLink nav-link px-2">Accueil</a></li>
+      <li class="nav-item"><a href="#adhérents" class="footLink nav-link px-2">Adhérents</a></li>
+      <li class="nav-item"><a href="#calendrier" class="footLink nav-link px-2">calendrier évènements</a></li>
       <li class="nav-item"><a href="#" class="footLink nav-link px-2">FAQs</a></li>
       <li class="nav-item"><a href="#" class="footLink nav-link px-2">CGU</a></li>
     </ul>
