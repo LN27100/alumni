@@ -115,8 +115,8 @@
         }
 
         // Utilisation de la fonction pour afficher le calendrier du mois actuel
-        $year = ($_GET['year']) ? $_GET['year'] : date('Y');
-        $month = ($_GET['month']) ? $_GET['month'] : date('n');
+        $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
+        $month = isset($_GET['month']) ? $_GET['month'] : date('n');
         createCalendar($year, $month);
         ?>
 
