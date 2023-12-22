@@ -147,7 +147,7 @@
         $ligne1 = "<span style='font-family: \"Diphylleia\", serif; font-size: 16px;  font-weight: bold;'><i class='bi bi-calendar-check'></i> Agenda</span>";
         $ligne2 = " <span style='font-family: \"Diphylleia\", serif; font-size: 14px; text-decoration: underline; font-weight: bold;'><i class='bi bi-dot'></i>
         24 décembre 2023</span>: Repas de Noël";
-        $ligne3 = " <span style='font-family: \"Diphylleia\", serif; font-size: 14px; text-decoration: underline; font-weight: bold;'><i class='bi bi-dot'></i>14 février 2024</span>: Réunion d'anciens célibataires ";
+        $ligne3 = " <span style='font-family: \"Diphylleia\", serif; font-size: 14px; text-decoration: underline; font-weight: bold;'><i class='bi bi-dot'></i>14 février 2024</span>: Réunion d'anciens stagiaires célibataires ";
         $ligne4 = " <span style='font-family: \"Diphylleia\", serif; font-size: 14px; text-decoration: underline; font-weight: bold;'><i class='bi bi-dot'></i>7 juillet 2024</span>: Barbecue géant.";
         ?>
 
